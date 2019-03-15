@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> 
+<head>
+<title>D3+OSC</title>
+<style>
+body {
+    margin: 0;
+    background: #111;
+    min-width: 960px;
+  }
+</style>
+</head>
+
+<body>
+<!-- <p>Connect your OSC app/device at port 3333 to send messages to this
+page.<br /><br />Configure your OSC app/device to listen at port 3334
+to messages I send from this page.</p> -->
+<!-- <hr /> -->
+
+<!-- Received from an OSC app/device at : <div id="status"></div> -->
+
+<!-- <hr /> -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://127.0.0.1:8081/socket.io/socket.io.js"></script>
+
+<script>
+
+var width = Math.max(960, innerWidth),
+    height = Math.max(500, innerHeight);
+
+var x1 = width / 2,
+    y1 = height / 2,
+    x0 = x1,
+    y0 = y1,
+    i = 0,
+    r = 300,
+    τ = 2 * Math.PI;
+
+var canvas = d3.select("body").append("canvas")
+    .attr("width", width)
+    .attr("height", height)
+    .on("ontouchstart" in document ? "touchmove" : "mousemove", move);
+
+var context = canvas.node().getContext("2d");
+context.globalCompositeOperation = "lighter";
+context.lineWidth = 2;
+
+d3.timer(function() {
+  context.clearRect(0, 0, width, height);
+
+  var z = d3.hsl(++i % 360, 1, .5).rgb(),
+      c = "rgba(" + z.r + "," + z.g + "," + z.b + ",",
+      x = x0 += (x1 - x0) * .1,
+      y = y0 += (y1 - y0) * .1;
+
+  d3.select({}).transition()
+      .duration(2000)
+      .ease(Math.sqrt)
+      .tween("circle", function() {
+        return function(t) {
+          context.strokeStyle = c + (1 - t) + ")";
+          context.beginPath();
+          context.arc(x, y, r * t, 0, τ);
+          context.stroke();
+        };
+      });
+});
+
+
+var socket = io('http://127.0.0.1:8081');
+//    console.log('oi');
+   socket.on('connect', function() {
+        // sends to socket.io server the host/port of oscServer
+        // and oscClient
+        socket.emit('config',
+            {
+                server: {
+                    port: 3333,
+                    host: '127.0.0.1'
+                },
+                client: {
+                    port: 3334,
+                    host: '127.0.0.1'
+                }
+            }
+        );
+    });
+
+function move(){
+    socket.on('message', function(obj) {
+        console.log(obj);
+        x1 = obj[1]*1000;
+        y1 = obj[2]*1000;
+        console.log(x1);
+        console.log(y1);
+        d3.event.preventDefault();
+    });
+};
+
+
+</script>
+
+<button onclick="socket.emit('message', '/foobar');">Send OSC message</button>
+
+</body> </html>
