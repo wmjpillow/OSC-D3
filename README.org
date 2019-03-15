@@ -55,7 +55,7 @@ $ node bridge.js
 An example HTML is avaitable at web-side/app.html. Open it in your browser:
 
 #+begin_src sh
-$ firefox test-app/test-app.html
+$ firefox app.html
 #+end_src
 
 Now you can run your favorite OSC app/device and send OSC messages
