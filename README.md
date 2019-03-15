@@ -1,5 +1,4 @@
 # OSC-D3
-
 Demo: https://vimeo.com/324347025
 
 ![ggplot2](OSC.gif)
