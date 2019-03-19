@@ -1,11 +1,10 @@
 # OSC-D3
-Demo: https://vimeo.com/324347025
+* Demo: https://vimeo.com/324347025
 
 ![ggplot2](OSC.gif)
 
 
 * Introduction
-
 OSC (Open Sound Control) is a protocol on top of UDP commonly used by
 audio applications. It could be seem as a /MIDI evolution/. 
 
