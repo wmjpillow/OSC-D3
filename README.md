@@ -1,12 +1,15 @@
 # OSC-D3
-* Demo: 
+
+Demo:
+------
 
 https://vimeo.com/324347025
 
 ![ggplot2](OSC.gif)
 
 
-* Introduction:
+Introduction:
+------
 
 OSC (Open Sound Control) is a protocol on top of UDP commonly used by
 audio applications. It could be seem as a /MIDI evolution/. 
@@ -16,13 +19,16 @@ D3 is a JavaScript library for manipulating documents based on data. D3 helps yo
 In this project, I combined OSC with D3. I use mobile APP TouchOSC to transmit data to web browser and use d3 to load the data and do further performance.
 
 
-* Prerequisites:
+Prerequisites:
+------
 
 - [[http://nodejs.org][node.js]]
 - [[http://socket.io][socket.io]]
 - an OSC supported application ([[http://puredata.org][Puredata]]) or hardware controller
 
-* Installation:
+
+Installation:
+------
 
 First of all, download and install nodejs from http://nodejs.org, then:
 
@@ -32,7 +38,9 @@ $ cd osc-web/
 $ npm install
 #+end_src
 
-* Using:
+
+Using:
+------
 
 Run the bridge app on your machine (localhost):
 
@@ -62,5 +70,7 @@ on 3333 and sending messages to 3334.
 
 Take a look at osc-side/ to examples of OSC apps.
 
-* OSC Control Reference:
+
+OSC Control Reference:
+------
 https://github.com/automata/osc-web
