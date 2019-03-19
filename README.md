@@ -1,9 +1,8 @@
 # OSC-D3
 
-Demo:
+Demo: https://vimeo.com/324347025
 ------
 
-https://vimeo.com/324347025
 
 ![ggplot2](OSC.gif)
 
