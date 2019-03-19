@@ -49,11 +49,11 @@ $ node bridge.js
 
 Launch another Terminal window. An example HTML is avaitable at web-side/app.html. Open it in your browser:
 
-#+begin_src sh
 $ cd osc-web
+
 $ cd web-side/
+
 $ open app.html
-#+end_src
 
 Now you can run your favorite OSC app/device and send OSC messages
 through port 3333. Those messages will be send to the HTML page by
@@ -65,8 +65,6 @@ sent to your OSC app/device.
 
 So, you can face the HTML page as an "OSC node", listening to messages
 on 3333 and sending messages to 3334.
-
-Take a look at osc-side/ to examples of OSC apps.
 
 
 OSC Control Reference:
