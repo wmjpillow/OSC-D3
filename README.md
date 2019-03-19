@@ -11,24 +11,15 @@ https://vimeo.com/324347025
 OSC (Open Sound Control) is a protocol on top of UDP commonly used by
 audio applications. It could be seem as a /MIDI evolution/. 
 
-The objective of *osc-web* is to make possible to send and receive
-OSC messages on the Web browser. With this browser capability we could
-do interesting things like:
-
-Connect OSC supported controllers to the Web browser
-Use the Web browser as a controller to OSC supported applications
-  (like Puredata, SuperCollider, Max/MSP, ...)
--Create a Web /OSC proxy/ where people all over the world could
-  connect yours OSC controllers or applications without complications
-  with /port fordwarding/
+D3 is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation.
 
 In this project, I combined OSC with D3. I use mobile APP TouchOSC to transmit data to web browser and use d3 to load the data and do further performance.
 
 
 * Prerequisites:
 
-- [[http://nodejs.org][node.js]]
-- [[http://socket.io][socket.io]]
+[[http://nodejs.org][node.js]]
+[[http://socket.io][socket.io]]
 - an OSC supported application ([[http://puredata.org][Puredata]]) or hardware controller
 
 * Installation:
