@@ -31,11 +31,11 @@ Installation:
 
 First of all, download and install nodejs from http://nodejs.org, then:
 
-#+begin_src sh
 $ git clone git://github.com/wmjpillow/OSC-D3
+
 $ cd osc-web/
+
 $ npm install
-#+end_src
 
 
 Using:
@@ -43,10 +43,9 @@ Using:
 
 Run the bridge app on your machine (localhost):
 
-#+begin_src sh
 $ cd osc-web
+
 $ node bridge.js
-#+end_src
 
 Launch another Terminal window. An example HTML is avaitable at web-side/app.html. Open it in your browser:
 
