@@ -1,5 +1,6 @@
 # OSC-D3
 * Demo: 
+
 https://vimeo.com/324347025
 
 ![ggplot2](OSC.gif)
@@ -14,8 +15,8 @@ The objective of *osc-web* is to make possible to send and receive
 OSC messages on the Web browser. With this browser capability we could
 do interesting things like:
 
--Connect OSC supported controllers to the Web browser
--Use the Web browser as a controller to OSC supported applications
+Connect OSC supported controllers to the Web browser
+Use the Web browser as a controller to OSC supported applications
   (like Puredata, SuperCollider, Max/MSP, ...)
 -Create a Web /OSC proxy/ where people all over the world could
   connect yours OSC controllers or applications without complications
