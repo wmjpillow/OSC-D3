@@ -34,7 +34,7 @@ In this project, I combined OSC with D3. I use mobile APP TouchOSC to transmit d
 First of all, download and install nodejs from http://nodejs.org, then:
 
 #+begin_src sh
-$ git clone git://github.com/automata/osc-web.git
+$ git clone git://github.com/wmjpillow/OSC-D3
 $ cd osc-web/
 $ npm install
 #+end_src
@@ -48,10 +48,12 @@ $ cd osc-web
 $ node bridge.js
 #+end_src
 
-An example HTML is avaitable at web-side/app.html. Open it in your browser:
+Launch another Terminal window. An example HTML is avaitable at web-side/app.html. Open it in your browser:
 
 #+begin_src sh
-$ firefox app.html
+$ cd osc-web
+$ cd web-side/
+$ open app.html
 #+end_src
 
 Now you can run your favorite OSC app/device and send OSC messages
