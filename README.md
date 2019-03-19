@@ -19,8 +19,8 @@ In this project, I combined OSC with D3. I use mobile APP TouchOSC to transmit d
 * Prerequisites:
 
 [[http://nodejs.org][node.js]]
-[[http://socket.io][socket.io]]
-- an OSC supported application ([[http://puredata.org][Puredata]]) or hardware controller
+- [[http://socket.io][socket.io]]
+-an OSC supported application ([[http://puredata.org][Puredata]]) or hardware controller
 
 * Installation:
 
