@@ -89,17 +89,20 @@ var socket = io('http://127.0.0.1:8081');
 function move(){
     socket.on('message', function(obj) {
         console.log(obj);
+        if(obj[1]==null||obj[2]==null){
+         x1=400;
+         x2=400;
+        }
+        else{
         x1 = obj[1]*1000;
         y1 = obj[2]*1000;
         console.log(x1);
-        console.log(y1);
-        d3.event.preventDefault();
+        console.log(y1);}
+        // d3.event.preventDefault();
     });
 };
 
-
 </script>
 
-<button onclick="socket.emit('message', '/foobar');">Send OSC message</button>
 
 </body> </html>
