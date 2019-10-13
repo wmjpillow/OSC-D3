@@ -4,7 +4,7 @@ Demo: https://vimeo.com/324347025
 ------
 
 
-![ggplot2](OSC.gif)
+![GitHub Logo](OSC.gif)
 
 
 Introduction:
