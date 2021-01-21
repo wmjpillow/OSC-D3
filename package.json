@@ -30,7 +30,7 @@
 	],
 	"dependencies": {
 		"node-osc": "1.1.x",
-		"socket.io": "^2.2.0"
+		"socket.io": "^2.4.0"
 	},
 	"keywords": [
 		"osc",
